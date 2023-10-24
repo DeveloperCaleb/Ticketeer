@@ -23,7 +23,7 @@ function Login(props) {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <label for="email">email</label>
+        <label htmlFor="email">email</label>
         <input
           value={email}
           onChange={handleChange}
@@ -32,7 +32,7 @@ function Login(props) {
           id="email"
           name="email"
         />
-        <label for="password">password</label>
+        <label htmlFor="password">password</label>
         <input
           value={pass}
           onChange={handleChange}
@@ -43,7 +43,9 @@ function Login(props) {
         />
         <button type="submit">Login</button>
       </form>
-      <button>Don't have an account? Register here.</button>
+      <button onClick={() => props.onFormSwitch("register")}>
+        Already have an account? Login here.
+      </button>
     </>
   );
 }

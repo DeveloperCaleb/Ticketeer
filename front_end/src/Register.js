@@ -20,7 +20,7 @@ function Register(props) {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <label for="email">Email:</label>
+        <label htmlFor="email">Email:</label>
         <input
           value={form.email}
           onChange={handleChange}
@@ -29,7 +29,7 @@ function Register(props) {
           id="email"
           name="email"
         />
-        <label for="password">Password:</label>
+        <label htmlFor="password">Password:</label>
         <input
           value={form.pass}
           onChange={handleChange}
@@ -38,7 +38,7 @@ function Register(props) {
           id="password"
           name="password"
         />
-        <label for="password">First Name:</label>
+        <label htmlFor="password">First Name:</label>
         <input
           value={form.firstName}
           onChange={handleChange}
@@ -47,7 +47,7 @@ function Register(props) {
           id="firstName"
           name="firstName"
         />
-        <label for="password">Last Name:</label>
+        <label htmlFor="password">Last Name:</label>
         <input
           value={form.lastName}
           onChange={handleChange}
@@ -56,7 +56,7 @@ function Register(props) {
           id="lastName"
           name="lastName"
         />
-        <label for="password">Phone Number:</label>
+        <label htmlFor="password">Phone Number:</label>
         <input
           value={form.phone}
           onChange={handleChange}
@@ -67,7 +67,9 @@ function Register(props) {
         />
         <button type="submit">Login</button>
       </form>
-      <button>Don't have an account? Register here.</button>
+      <button onClick={() => props.onFormSwitch("login")}>
+        Don't have an account? Register here.
+      </button>
     </>
   );
 }
