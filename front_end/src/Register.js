@@ -18,8 +18,9 @@ function Register(props) {
   const handleSubmit = () => {};
 
   return (
-    <>
-      <form onSubmit={handleSubmit}>
+    <div className="register-form-container">
+      <h2>Register</h2>
+      <form className="register-form" onSubmit={handleSubmit}>
         <label htmlFor="email">Email:</label>
         <input
           value={form.email}
@@ -67,10 +68,10 @@ function Register(props) {
         />
         <button type="submit">Login</button>
       </form>
-      <button onClick={() => props.onFormSwitch("login")}>
-        Don't have an account? Register here.
+      <button className="link-btn" onClick={() => props.onFormSwitch("login")}>
+        Already have an account? Login here.
       </button>
-    </>
+    </div>
   );
 }
 

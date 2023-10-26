@@ -21,8 +21,9 @@ function Login(props) {
   };
 
   return (
-    <>
-      <form onSubmit={handleSubmit}>
+    <div className="auth-form-container">
+      <h2>Login</h2>
+      <form className="login-form" onSubmit={handleSubmit}>
         <label htmlFor="email">email</label>
         <input
           value={email}
@@ -43,10 +44,13 @@ function Login(props) {
         />
         <button type="submit">Login</button>
       </form>
-      <button onClick={() => props.onFormSwitch("register")}>
-        Already have an account? Login here.
+      <button
+        className="link-btn"
+        onClick={() => props.onFormSwitch("register")}
+      >
+        Don't have an account? Register here.{" "}
       </button>
-    </>
+    </div>
   );
 }
 
