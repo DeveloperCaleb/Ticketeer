@@ -15,7 +15,10 @@ function Register(props) {
     setForm({ ...form, [target.name]: target.value });
   };
 
-  const handleSubmit = () => {};
+  const handleSubmit = () => {
+    console.log("authenticating");
+    console.log("authenticated");
+  };
 
   return (
     <div className="register-form-container">
