@@ -16,8 +16,8 @@ function Login(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email);
-    console.log(pass);
+    console.log(email, pass);
+    props.setAuthentication(true);
   };
 
   return (
@@ -42,7 +42,9 @@ function Login(props) {
           id="password"
           name="password"
         />
-        <button type="submit">Login</button>
+        <button onSubmit={handleSubmit} type="submit">
+          Login
+        </button>
       </form>
       <button
         className="link-btn"
