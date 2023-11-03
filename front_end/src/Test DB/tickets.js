@@ -1,0 +1,61 @@
+const tickets = [
+  {
+    TicketID: 1,
+    Title: "Cannot access email",
+    Description: "I am unable to access my email account. Please help.",
+    CreatedBy: 1,
+    AssignedTo: 2,
+    Status: "Open",
+    Priority: 2,
+    CreatedAt: "2023-11-03 10:00:00",
+    UpdatedAt: "2023-11-03 10:00:00",
+  },
+  {
+    TicketID: 2,
+    Title: "Printer not working",
+    Description: "Our office printer is not functioning. We need assistance.",
+    CreatedBy: 3,
+    AssignedTo: 4,
+    Status: "Open",
+    Priority: 1,
+    CreatedAt: "2023-11-03 11:30:00",
+    UpdatedAt: "2023-11-03 11:30:00",
+  },
+  {
+    TicketID: 3,
+    Title: "Software installation issue",
+    Description: "I'm having trouble installing the software on my computer.",
+    CreatedBy: 5,
+    AssignedTo: 2,
+    Status: "In-Progress",
+    Priority: 2,
+    CreatedAt: "2023-11-03 12:45:00",
+    UpdatedAt: "2023-11-03 13:15:00",
+  },
+  {
+    TicketID: 4,
+    Title: "Login problems",
+    Description:
+      "I can't log in to my account. It says my password is incorrect.",
+    CreatedBy: 6,
+    AssignedTo: 2,
+    Status: "Open",
+    Priority: 3,
+    CreatedAt: "2023-11-03 14:20:00",
+    UpdatedAt: "2023-11-03 14:20:00",
+  },
+  {
+    TicketID: 5,
+    Title: "Network connectivity issue",
+    Description: "The internet connection is unstable in our office.",
+    CreatedBy: 7,
+    AssignedTo: 4,
+    Status: "Closed",
+    Priority: 2,
+    CreatedAt: "2023-11-03 15:10:00",
+    UpdatedAt: "2023-11-03 16:30:00",
+  },
+  // Add more ticket examples as needed
+];
+
+export { tickets };

@@ -4,6 +4,7 @@ import Login from "./Login/Login";
 import Register from "./Login/Register";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Dashboard/Home";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   //Make dashboard first in the route

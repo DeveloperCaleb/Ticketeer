@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { users } from "../Test DB/users";
 
 function Login(props) {
+  console.log(users);
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
 

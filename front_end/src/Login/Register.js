@@ -18,6 +18,7 @@ function Register(props) {
   const handleSubmit = () => {
     console.log("authenticating");
     console.log("authenticated");
+    props.onFormSwitch("login");
   };
 
   return (
@@ -69,7 +70,9 @@ function Register(props) {
           id="phone"
           name="phone"
         />
-        <button type="submit">Login</button>
+        <button onSubmit={handleSubmit} type="submit">
+          Register
+        </button>
       </form>
       <button className="link-btn" onClick={() => props.onFormSwitch("login")}>
         Already have an account? Login here.
