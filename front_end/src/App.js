@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import "./App.css";
 import Login from "./Login/Login";
 import Register from "./Login/Register";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Route,
+  RouterProvider,
+  Routes,
+} from "react-router-dom";
 import Home from "./Dashboard/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
 import TopNavBar from "./TopNavBar";
@@ -24,7 +29,12 @@ function App() {
   //use router to route to home page after login
 
   return (
-    <div>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/home" element={<Home />} />
+    </Routes>
+
+    /*<div>
       {authentication === true ? <TopNavBar /> : <></>}
       <div className="App">
         {authentication === true ? (
@@ -38,7 +48,7 @@ function App() {
           <Register onFormSwitch={toggleForm} />
         )}
       </div>
-    </div>
+    </div>*/
   );
 }
 
