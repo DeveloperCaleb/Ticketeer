@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { users } from "../Test DB/users";
+import "./Login.css";
+import { useNavigate } from "react-router-dom";
 
 function Login(props) {
   console.log(users);
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const inputTarget = e.target;
@@ -19,7 +22,7 @@ function Login(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(email, pass);
-    props.setAuthentication(true);
+    navigate("/home");
   };
 
   return (
@@ -48,10 +51,7 @@ function Login(props) {
           Login
         </button>
       </form>
-      <button
-        className="link-btn"
-        onClick={() => props.onFormSwitch("register")}
-      >
+      <button className="link-btn">
         Don't have an account? Register here.{" "}
       </button>
     </div>

@@ -5,6 +5,7 @@ import Register from "./Login/Register";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Dashboard/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
+import TopNavBar from "./TopNavBar";
 
 function App() {
   //Make dashboard first in the route
@@ -20,27 +21,24 @@ function App() {
     setCurrentForm(formName);
   };
 
-  return (
-    <div className="App">
-      {authentication === true ? (
-        <Home />
-      ) : currentForm === "login" ? (
-        <Login
-          onFormSwitch={toggleForm}
-          setAuthentication={setAuthentication}
-        />
-      ) : (
-        <Register onFormSwitch={toggleForm} />
-      )}
-    </div>
+  //use router to route to home page after login
 
-    /*  <div className="App">
-      {currentForm === "login" && authentication === false ? (
-        <Login onFormSwitch={toggleForm} />
-      ) : (
-        <Register onFormSwitch={toggleForm} />
-      )}
-    </div>*/
+  return (
+    <div>
+      {authentication === true ? <TopNavBar /> : <></>}
+      <div className="App">
+        {authentication === true ? (
+          <Home />
+        ) : currentForm === "login" ? (
+          <Login
+            onFormSwitch={toggleForm}
+            setAuthentication={setAuthentication}
+          />
+        ) : (
+          <Register onFormSwitch={toggleForm} />
+        )}
+      </div>
+    </div>
   );
 }
 
