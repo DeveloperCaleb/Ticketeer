@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./Register.css";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function Register(props) {
+  const navigate = useNavigate();
   const defaultForm = {
     email: "",
     password: "",
@@ -75,9 +77,7 @@ function Register(props) {
           Register
         </button>
       </form>
-      <button className="link-btn" onClick={() => props.onFormSwitch("login")}>
-        Already have an account? Login here.
-      </button>
+      <button className="link-btn">Already have an account? Login here.</button>
     </div>
   );
 }

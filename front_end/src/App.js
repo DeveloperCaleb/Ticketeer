@@ -31,24 +31,10 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Login />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/home" element={<Home />} />
+      <Route path="/register" element={<Register />} />
     </Routes>
-
-    /*<div>
-      {authentication === true ? <TopNavBar /> : <></>}
-      <div className="App">
-        {authentication === true ? (
-          <Home />
-        ) : currentForm === "login" ? (
-          <Login
-            onFormSwitch={toggleForm}
-            setAuthentication={setAuthentication}
-          />
-        ) : (
-          <Register onFormSwitch={toggleForm} />
-        )}
-      </div>
-    </div>*/
   );
 }
 
