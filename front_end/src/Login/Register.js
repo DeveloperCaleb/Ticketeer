@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Register.css";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate, useNavigate, Link } from "react-router-dom";
 
 function Register(props) {
   const navigate = useNavigate();
@@ -78,9 +78,11 @@ function Register(props) {
             Register
           </button>
         </form>
-        <button className="link-btn">
-          Already have an account? Login here.
-        </button>
+        <div className="link-container">
+          <Link to={"/"} className="link">
+            Already have an account? Login here.
+          </Link>
+        </div>
       </div>
     </div>
   );

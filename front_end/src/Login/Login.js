@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { users } from "../Test DB/users";
 import "./Login.css";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate, useNavigate, Link } from "react-router-dom";
 
 function Login(props) {
   console.log(users);
@@ -53,9 +53,11 @@ function Login(props) {
             Login
           </button>
         </form>
-        <button className=" link-btn">
-          Don't have an account? Register here.
-        </button>
+        <div className="link-container">
+          <Link to={"/register"} className="link">
+            Don't have an account? Register here.
+          </Link>
+        </div>
       </div>
     </div>
   );
