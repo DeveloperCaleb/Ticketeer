@@ -1,6 +1,6 @@
 import React from "react";
-import Ticket from "./Ticket";
 import Table from "react-bootstrap/Table";
+import Ticket from "./Ticket";
 
 function TicketList(props) {
   return (

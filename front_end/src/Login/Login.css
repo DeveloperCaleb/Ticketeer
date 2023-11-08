@@ -54,3 +54,8 @@ button {
 .link:hover {
   color: blue;
 }
+
+.warning {
+  color: red;
+  text-decoration: underline;
+}

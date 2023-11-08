@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { users } from "../Test DB/users";
+import { Link } from "react-router-dom";
 import "./Login.css";
-import { Navigate, useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 function Login(props) {
-  console.log(users);
+  let navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
-  const navigate = useNavigate();
+  const [validation, setValidation] = useState(false);
 
   const handleChange = (e) => {
     const inputTarget = e.target;
@@ -19,15 +19,20 @@ function Login(props) {
     console.log(email, pass);
   };
 
+  //link to home after submit
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(email, pass);
-    navigate("/home");
+    if (email === "" || pass === "") {
+      setValidation(!validation);
+      return;
+    } else {
+      navigate("/home");
+    }
   };
 
   return (
     <div className="Login">
-      {" "}
       <div className="auth-form-container">
         <h2>Login</h2>
         <form className="login-form" onSubmit={handleSubmit}>
@@ -49,6 +54,11 @@ function Login(props) {
             id="password"
             name="password"
           />
+          {validation ? (
+            <div className="warning">Invalid email or password.</div>
+          ) : (
+            <div />
+          )}
           <button onSubmit={handleSubmit} type="submit">
             Login
           </button>

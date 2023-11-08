@@ -1,7 +1,5 @@
 import React from "react";
-import Table from "react-bootstrap/Table";
 
-import { users } from "../../Test DB/users";
 import { tickets } from "../../Test DB/tickets";
 
 function Ticket(props) {

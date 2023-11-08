@@ -1,7 +1,7 @@
 import React from "react";
-import TicketList from "./Tickets/TicketList";
-import TopNavBar from "../TopNavBar";
+import TopNavBar from "../UI_Utils/TopNavBar";
 import "./Home.css";
+import TicketList from "./Tickets/TicketList";
 
 function Home(props) {
   return (

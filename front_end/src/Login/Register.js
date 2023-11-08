@@ -1,9 +1,8 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Register.css";
-import { Navigate, useNavigate, Link } from "react-router-dom";
 
 function Register(props) {
-  const navigate = useNavigate();
   const defaultForm = {
     email: "",
     password: "",
