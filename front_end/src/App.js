@@ -5,6 +5,7 @@ import "./App.css";
 import Home from "./Dashboard/Home";
 import Login from "./Login/Login";
 import Register from "./Login/Register";
+import TicketDetails from "./Dashboard/Tickets/TicketDetails";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/home" element={<Home />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/ticket/:ticketId" element={<TicketDetails />} />
     </Routes>
   );
 }
