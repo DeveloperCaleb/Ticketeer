@@ -1,0 +1,27 @@
+.ticket-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background: #f2e8df;
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 2px solid #f28585;
+  border-radius: 25px;
+}
+
+.ticket-owner {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  display: flex;
+}
+
+.comments {
+  display: flex;
+}

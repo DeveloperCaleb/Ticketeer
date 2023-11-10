@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { tickets } from "../../Test DB/tickets";
+import { comments } from "../../Test DB/comments";
+import SelectedTicketForm from "./TicketDetailsForm";
 
 function TicketDetails(props) {
   const { ticketId } = useParams();
@@ -9,14 +11,15 @@ function TicketDetails(props) {
     return ticket.TicketID.toString() === ticketId;
   });
 
+  const comment = comments.filter((comment) => {
+    return comment.TicketID.toString() === ticketId;
+  });
+
+  const [formData, setFormData] = useState(ticket);
+
   return (
     <div>
-      <div>Title: {ticket.Title}</div>
-      <div>Ticket ID: {ticket.TicketID}</div>
-      <div>Created At: {ticket.CreatedAt}</div>
-      <div>Updated At: {ticket.UpdatedAt}</div>
-      <div>Description: {ticket.Description}</div>
-      <div>Assigned to: {ticket.AssignedTo}</div>
+      <SelectedTicketForm formData={formData} comments={comment} />
     </div>
   );
 }
